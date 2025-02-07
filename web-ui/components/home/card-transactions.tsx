@@ -19,7 +19,7 @@ export const CardTransactions = () => {
          <Card.Body css={{py: '$10'}}>
             <Flex css={{gap: '$5'}} justify={'center'}>
                <Text h3 css={{textAlign: 'center'}}>
-                  Latest Transactions
+                  Your App Usage
                </Text>
             </Flex>
             <Flex
@@ -28,7 +28,7 @@ export const CardTransactions = () => {
 
                direction={'column'}
             >
-               <Flex css={{gap: '$6'}} align={'center'} justify="between">
+               {/* <Flex css={{gap: '$6'}} align={'center'} justify="between">
                   <Avatar
                      size="lg"
                      pointer
@@ -46,9 +46,9 @@ export const CardTransactions = () => {
                   <Text span css={{color: '$accents8'}} size={'$xs'}>
                      9/20/2021
                   </Text>
-               </Flex>
+               </Flex> */}
 
-               <Flex css={{gap: '$6'}} align={'center'} justify="between">
+               {/* <Flex css={{gap: '$6'}} align={'center'} justify="between">
                   <Avatar
                      size="lg"
                      pointer
@@ -66,7 +66,7 @@ export const CardTransactions = () => {
                   <Text span css={{color: '$accents8'}} size={'$xs'}>
                      9/20/2021
                   </Text>
-               </Flex>
+               </Flex> */}
                <Flex css={{gap: '$6'}} align={'center'} justify="between">
                   <Avatar
                      size="lg"
@@ -86,7 +86,7 @@ export const CardTransactions = () => {
                      2/20/2022
                   </Text>
                </Flex>
-               <Flex css={{gap: '$6'}} align={'center'} justify="between">
+               {/* <Flex css={{gap: '$6'}} align={'center'} justify="between">
                   <Avatar
                      size="lg"
                      pointer
@@ -123,12 +123,12 @@ export const CardTransactions = () => {
                   <Text span css={{color: '$accents8'}} size={'$xs'}>
                      5/20/2022
                   </Text>
-               </Flex>
+               </Flex> */}
                <Flex css={{gap: '$6'}} align={'center'} justify="between">
                   <Avatar
                      size="lg"
                      pointer
-                     src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                    src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
                      bordered
                      color="gradient"
                      stacked
@@ -142,7 +142,7 @@ export const CardTransactions = () => {
                   <Text span css={{color: '$accents8'}} size={'$xs'}>
                      12/20/2022
                   </Text>
-               </Flex>
+               </Flex> 
             </Flex>
          </Card.Body>
       </Card>

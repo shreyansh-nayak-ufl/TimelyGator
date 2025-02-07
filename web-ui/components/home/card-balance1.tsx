@@ -33,7 +33,7 @@ export const CardBalance1 = () => {
                   css={{color: 'white'}}
                   weight={'semibold'}
                >
-                  $45,910
+                  $900
                </Text>
                <Text span css={{color: '$green600'}} size={'$xs'}>
                   + 4.5%

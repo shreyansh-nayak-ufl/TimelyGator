@@ -1,21 +1,71 @@
 import React from 'react';
-import {Box} from '../styles/box';
-import Chart, {Props} from 'react-apexcharts';
+import { Box } from '../styles/box';
+import Chart, { Props } from 'react-apexcharts';
 
 const state: Props['series'] = [
    {
-      name: 'Series1',
-      data: [31, 40, 28, 51, 42, 109, 100],
+      name: 'Productivity',
+      data: [
+         {
+            x: 'Monday',
+            y: 6,
+         },
+         {
+            x: 'Tuesday',
+            y: 5.5,
+         },
+         {
+            x: 'Wednesday',
+            y: 3,
+         },
+         {
+            x: 'Thursday',
+            y: 2,
+         },
+         {
+            x: 'Friday',
+            y: 6.6,
+         },
+         {
+            x: 'Saturday',
+            y: 1,
+         }
+      ]
    },
    {
-      name: 'Series2',
-      data: [11, 32, 45, 32, 34, 52, 41],
-   },
+      name: 'Non productive',
+      data: [
+         {
+            x: 'Monday',
+            y: 4,
+         },
+         {
+            x: 'Tuesday',
+            y: 3.5,
+         },
+         {
+            x: 'Wednesday',
+            y: 2,
+         },
+         {
+            x: 'Thursday',
+            y: 1,
+         },
+         {
+            x: 'Friday',
+            y: 5,
+         },
+         {
+            x: 'Saturday',
+            y: 0.5,
+         }
+      ]
+   }
 ];
 
 const options: Props['options'] = {
    chart: {
-      type: 'area',
+      type: 'bar',
       animations: {
          easing: 'linear',
          speed: 300,
@@ -29,14 +79,17 @@ const options: Props['options'] = {
       id: 'basic-bar',
       fontFamily: 'Inter, sans-serif',
       foreColor: 'var(--nextui-colors-accents9)',
-      stacked: true,
+      stacked: false,
       toolbar: {
          show: false,
       },
    },
-
+   legend: {
+      show: true,
+      position: 'top',
+   },
    xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+      categories: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       labels: {
          // show: false,
          style: {
@@ -53,11 +106,19 @@ const options: Props['options'] = {
    },
    yaxis: {
       labels: {
+         formatter:(hours)=>{return hours + 'hrs'},
          style: {
             colors: 'var(--nextui-colors-accents8)',
             fontFamily: 'Inter, sans-serif',
-         },
+         },       
       },
+      title: {
+         text: 'Hours',
+         style: {
+            color: 'var(--nextui-colors-accents8)',
+            fontFamily: 'Inter, sans-serif',
+         },
+      }
    },
    tooltip: {
       enabled: false,
@@ -76,6 +137,9 @@ const options: Props['options'] = {
    },
    // @ts-ignore
    markers: false,
+   dataLabels: {
+      enabled: false,
+   }
 };
 
 export const Steam = () => {
@@ -91,7 +155,7 @@ export const Steam = () => {
                <Chart
                   options={options}
                   series={state}
-                  type="area"
+                  type="bar"
                   height={425}
                />
             </div>

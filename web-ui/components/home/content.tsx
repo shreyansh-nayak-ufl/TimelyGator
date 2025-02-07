@@ -85,7 +85,7 @@ export const Content = () => (
                      },
                   }}
                >
-                  Statistics
+                  Productivity through week
                </Text>
                <Box
                   css={{
